@@ -48,7 +48,7 @@ function ToggleProgressive:updateIcon()
         --print(self.objectToDisable)
         --self.objectToDisable:setActive(false)
 
-        print("im here now!")
+        print(self.itemType)
         --print(self.objectToDisable.Name)
 
         --if self.itemType == 1 then --Toggle
@@ -61,40 +61,15 @@ function ToggleProgressive:updateIcon()
         --else --Consumable
         ----not yet implemented
         --end
-        self:updateObjectToDisable(true)
-        --return
-        --self.objectToDisable.Active = false
 
-        --self.objectToDisable.Icon = self.otherDisabledImage
-        --self.objectToDisable.IgnoreUserInput = false
+        self.objectToDisable.Active = false
+
+        self.objectToDisable.Icon = self.otherDisabledImage
+        self.objectToDisable.IgnoreUserInput = false
     else
         self.ItemInstance.Icon = self.disabledImage
-        
-        self:updateObjectToDisable(false)
-        --return
+    
         --item.CurrentStage = 1--Dont bring this one back
-        --self.objectToDisable.Icon = nil
-        --self.objectToDisable.IgnoreUserInput = true
-    end
-end
-
-function ToggleProgressive:updateObjectToDisable(active)
-    if (active) then
-        self.objectToDisable.Active = false
-        self.objectToDisable.Icon = self.otherDisabledImage
-        self.objectToDisable.IgnoreUserInput = false
-    else
-        self.objectToDisable.Icon = nil
-        self.objectToDisable.IgnoreUserInput = true
-    end
-end
-
-function ToggleProgressive:loadObjectToDisable()
-    if (self.objectToDisable.Active) then
-        self.objectToDisable.Active = false
-        self.objectToDisable.Icon = self.otherDisabledImage
-        self.objectToDisable.IgnoreUserInput = false
-    else
         self.objectToDisable.Icon = nil
         self.objectToDisable.IgnoreUserInput = true
     end
@@ -130,21 +105,19 @@ function ToggleProgressive:advanceToCode(code)
 end
 
 function ToggleProgressive:save()
-    --print(self:getActive())
+    print(self:getActive())
 
-    local data = {}
-    data["active"] = self:getActive()
-    data["objectToDisable"] = self.objectToDisable.Active
-    return data
+    local saveData = {}
+    saveData["active"] = self.getActive()
+    return saveData
 end
 
-function ToggleProgressive:load(data)
+function ToggleProgressive:Load(data)
     if data["active"] ~= nil then
         self:setActive(data["active"])
-        self:updateIcon()
-        self.objectToDisable.Active = data["objectToDisable"]
     end
-    --print(self:getActive())
+    print(self:getActive())
+    self:updateIcon()
     return true
 end
 

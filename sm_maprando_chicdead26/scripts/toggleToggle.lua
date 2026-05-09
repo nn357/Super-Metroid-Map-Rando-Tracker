@@ -34,7 +34,7 @@ function ToggleToggle:init(name, code, imagePath, imagePathDisabled, codeObjectT
 
     --self.itemType = itemType
     --print(self.objectToDisable == nil)
-    print("do")
+    --print("do")
     --self.ItemInstance.Icon = self.disabledImage
     self.ItemInstance.Icon = self.activeImage
     self:updateIcon()    
@@ -72,7 +72,7 @@ function ToggleToggle:updateIcon()
         ----not yet implemented
         --end
 
-        self.objectToDisable.CurrentStage = 0
+        self.objectToDisable.CurrentStage = 2
 
         self.objectToDisable.Icon = self.otherDisabledImage
         self.objectToDisable.IgnoreUserInput = false
@@ -115,22 +115,19 @@ function ToggleToggle:advanceToCode(code)
 end
 
 function ToggleToggle:save()
-    print(self.objectToDisable.CurrentStage)
+    print(self:getActive())
 
-    local data = {}
-    data["active"] = self:getActive()
-    data["objectToDisable"] = self.objectToDisable.CurrentStage
-    --data["objectToDisableA"]
-    return data
+    local saveData = {}
+    saveData["active"] = self.getActive()
+    return saveData
 end
 
-function ToggleToggle:load(data)
+function ToggleToggle:Load(data)
     if data["active"] ~= nil then
         self:setActive(data["active"])
-        --self:updateIcon()
-        self.objectToDisable.CurrentStage = data["objectToDisable"]
-        --objectToDisable:updateIcon()
     end
+    print(self:getActive())
+    self:updateIcon()
     return true
 end
 

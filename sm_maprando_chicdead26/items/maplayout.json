@@ -29,12 +29,12 @@
         "inherit_codes": "false",
         "codes": "wild"
       },
-      //{
-      //  "name": "Chaos",
-      //  "img": "images/mapl_chaos.png",
-      //  "inherit_codes": "false",
-      //  "codes": "chaos"
-      //}
+      {
+        "name": "Custom",
+        "img": "images/mapl_custom.png",
+        "inherit_codes": "false",
+        "codes": "maplcustom"
+      }
     ]
   }
 ]

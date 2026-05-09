@@ -64,7 +64,13 @@
         "img": "images/diff_insane+.png",
         "inherit_codes": "false",
         "codes": "insaneplus"
-      }
+      },
+      {
+        "name": "Custom",
+        "img": "images/diff_custom.png",
+        "inherit_codes": "false",
+        "codes": "diffcustom"
+      },
     ]
   }
 ]

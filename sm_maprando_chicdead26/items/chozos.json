@@ -1,20 +1,20 @@
 [
-  //{
-  //  "name": "Bomb Torizo",
-  //  "type": "progressive",
-  //  "allow_disabled": "false",
-  //  "loop": "true",
-  //  "stages": [
-  //    {
-  //      "img": "images/Miniboss1E.png"
-  //    },
-  //    {
-  //      "img": "images/Miniboss1D.png",
-  //      "img_mods": "@disabled",
-  //      "codes": "bombtorizo, chozos"
-  //    }
-  //  ]
-  //},
+  {
+    "name": "Bomb Torizo",
+    "type": "progressive",
+    "allow_disabled": "false",
+    "loop": "true",
+    "stages": [
+      {
+        "img": "images/Miniboss1E.png"
+      },
+      {
+        "img": "images/Miniboss1D.png",
+        "img_mods": "@disabled",
+        "codes": "bombtorizo, chozos"
+      }
+    ]
+  },
   {
     "name": "Bowling Chozo",
     "type": "progressive",
@@ -46,21 +46,21 @@
         "codes": "acidchozo, chozos"
       }
     ]
-  }//,
-  //{
-  //  "name": "Golden Torizo",
-  //  "type": "progressive",
-  //  "allow_disabled": "false",
-  //  "loop": "true",
-  //  "stages": [
-  //    {
-  //      "img": "images/Miniboss5E.png"
-  //    },
-  //    {
-  //      "img": "images/Miniboss5D.png",
-  //      "img_mods": "@disabled",
-  //      "codes": "goldentorizo, chozos"
-  //    }
-  //  ]
-  //}
+  },
+  {
+    "name": "Golden Torizo",
+    "type": "progressive",
+    "allow_disabled": "false",
+    "loop": "true",
+    "stages": [
+      {
+        "img": "images/Miniboss5E.png"
+      },
+      {
+        "img": "images/Miniboss5D.png",
+        "img_mods": "@disabled",
+        "codes": "goldentorizo, chozos"
+      }
+    ]
+  }
 ]
